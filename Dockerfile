@@ -1,18 +1,26 @@
-# Use official Node.js image
-FROM node:20-alpine
+# ✅ Use Node.js 18 as base image
+FROM node:18
 
-# Set working directory
+# ✅ Set working directory inside container
 WORKDIR /app
 
-# Copy package files and install dependencies
-COPY package.json package-lock.json* ./
-RUN npm install
+# ✅ Copy package.json and package-lock.json
+COPY package*.json ./
 
-# Copy rest of the code
+# ✅ Clear npm cache and install dependencies
+RUN npm cache clean --force && npm install --omit=dev
+
+# ✅ Optional: Clean previous modules and reinstall
+RUN rm -rf node_modules package-lock.json && npm install --omit=dev
+
+# ✅ Copy all source files
 COPY . .
 
-# Expose the port
+# ✅ Expose port 8080
 EXPOSE 8080
 
-# Start the bot
+# ✅ Increase File Upload Size Limit
+ENV MAX_UPLOAD_SIZE=50MB
+
+# ✅ Start the bot
 CMD ["npm", "start"]

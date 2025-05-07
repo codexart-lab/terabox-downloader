@@ -1,0 +1,9 @@
+# Ignore node_modules to rebuild inside container
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+.git
+.gitignore
+.DS_Store
+.env

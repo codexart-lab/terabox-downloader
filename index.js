@@ -2,7 +2,7 @@ import express from 'express';
 import { Telegraf, Markup } from 'telegraf';
 import axios from 'axios';
 
-const BOT_TOKEN = 'YOUR_TOKEN';
+const BOT_TOKEN = '7778288292:AAHTnGkxJcA7Oohu8mdULkDbCe9a6zrcTWU';
 const PORT = 8080;
 const bot = new Telegraf(BOT_TOKEN);
 const app = express();

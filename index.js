@@ -58,7 +58,7 @@ bot.on('text', async ctx => {
 // Set webhook
 (async () => {
     try {
-        await bot.telegram.setWebhook('existing-gay-codexart-lab-2f129e77.koyeb.app//webhook');
+        await bot.telegram.setWebhook('https://existing-gay-codexart-lab-2f129e77.koyeb.app//webhook');
         console.log('✅ Webhook set');
     } catch (err) {
         console.error('Webhook error:', err.message);

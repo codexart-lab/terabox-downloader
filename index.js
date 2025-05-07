@@ -16,11 +16,11 @@ app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
 
 bot.start(ctx => {
     ctx.replyWithPhoto(
-        { url: 'https://graph.org/file/4e8a1172e8ba4b7a0bdfa.jpg' },
+        { url: 'https://i.ibb.co/TqdF0d7s/Catwoman.jpg' },
         {
             caption: '👋 Welcome to TeraBox Downloader Bot!\n\nSend me a TeraBox sharing link.',
             ...Markup.inlineKeyboard([
-                [Markup.button.url('📌 Join Channel', 'https://t.me/Opleech_WD')]
+                [Markup.button.url('📌 Join Channel', 'https://t.me/codexfusion')]
             ])
         }
     );
